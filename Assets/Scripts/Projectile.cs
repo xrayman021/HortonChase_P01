@@ -19,7 +19,7 @@ namespace Examples.Strategy
         {
             _rb = GetComponent<Rigidbody>();
 
-            _moveBehavior = new LinearMoveBehavior(_rb, _travelspeed);
+            _moveBehavior = new LinearMoveBehavior(_rb, _travelSpeed);
         }
 
         private void OnTriggerEnter(Collider other)
