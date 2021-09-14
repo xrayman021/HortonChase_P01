@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Examples.Strategy
 {
+
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(Collider))]
     public class Projectile : MonoBehaviour
