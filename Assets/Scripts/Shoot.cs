@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject currentBullet = Instantiate(bullet, launchpoint.position, launchpoint.rotation);
-            currentBullet.GetComponent<Rigidbody>().AddForce(launchpoint.forward);
+            currentBullet.GetComponent<Rigidbody>().AddForce(launchpoint.forward * power);
             GameObject muzzleFlash = Instantiate(particleSystem, launchpoint.position, launchpoint.rotation);
         }
     }

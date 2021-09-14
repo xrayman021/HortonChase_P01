@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;
-    [SerializeField] Text _currentTreasureAmount; 
-    int _currentHealth;
+    [SerializeField] Text _displayHealth; 
+    public static int _currentHealth;
     int _treasureAmount;
     int SetHealth;
 
@@ -50,9 +50,14 @@ public class Player : MonoBehaviour
     public void IncreaseTreasure(int treasureIncrease)
     {
         _treasureAmount += treasureIncrease;
-        _currentTreasureAmount.text = "Treasure: " + _treasureAmount.ToString();
+        //_currentTreasureAmount.text = "Treasure: " + _treasureAmount.ToString();
         Debug.Log("Player's treasure: " + _treasureAmount);
     }
 
-    
+    public void Update()
+    {
+        _displayHealth.text = ""+_currentHealth;
+    }
+
+
 }

@@ -18,6 +18,11 @@ public class Boss : MonoBehaviour
     void Update()
     {
         displayHealth.text = ""+health;
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
 
