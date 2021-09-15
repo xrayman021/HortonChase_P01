@@ -8,6 +8,7 @@ public class BossBeDeadly : MonoBehaviour
     public GameObject thePlayer;
     public int damage = 5;
     private Player playerScript;
+    [SerializeField] AudioClip _playerDamagedSound = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class BossBeDeadly : MonoBehaviour
     {
         if (Vector3.Distance(this.transform.position, thePlayer.transform.position) < damageDistance)
         {
+            AudioHelper.PlayClip2D(_playerDamagedSound, 1f);
             playerScript.DecreaseHealth(1);
             Destroy(this.gameObject);
         }

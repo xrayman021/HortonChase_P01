@@ -11,6 +11,8 @@ public class BossBrain : MonoBehaviour
     public GameObject bullet;
     public Transform launchPoint;
     public float shootPower;
+    [SerializeField] AudioClip _shootSound = null;
+    [SerializeField] ParticleSystem _shootParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class BossBrain : MonoBehaviour
     public void Shoot()
     {
         GameObject currentBullet = Instantiate(bullet, launchPoint.position, launchPoint.rotation);
+        AudioHelper.PlayClip2D(_shootSound, 1f);
+        _shootParticles = Instantiate(_shootParticles, transform.position, Quaternion.identity);
         currentBullet.GetComponent<Rigidbody>().AddForce(launchPoint.forward * shootPower);
     }
 
