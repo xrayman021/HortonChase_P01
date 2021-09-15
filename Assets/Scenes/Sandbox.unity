@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7deae910b21a2142adfc1132501442e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 3
+  _maxHealth: 10
   _displayHealth: {fileID: 370778255}
   _playerDamageSound: {fileID: 8300000, guid: d2b154981161fe34eb13c37ffcb9630c, type: 3}
   _playerDamageParticles: {fileID: 0}

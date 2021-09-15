@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public static int health = 5;
+    public static int health = 50;
     public Text displayHealth;
     [SerializeField] AudioClip _bossDeathSound = null;
     [SerializeField] ParticleSystem _deathParticles;
