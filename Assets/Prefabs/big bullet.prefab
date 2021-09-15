@@ -227,4 +227,4 @@ MonoBehaviour:
   damageDistance: 2
   theBoss: {fileID: 0}
   damage: 5
-  _bossDamagedSound: {fileID: 8300000, guid: 8c686c6f9593fbd4392d93e7d8704cc5, type: 3}
+  _bossDamagedSound: {fileID: 8300000, guid: 51a87588d7126774c85f0f4982b33790, type: 3}

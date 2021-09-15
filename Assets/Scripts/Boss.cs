@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public static int health = 50;
+    public static int health = 5;
     public Text displayHealth;
     [SerializeField] AudioClip _bossDeathSound = null;
     [SerializeField] ParticleSystem _deathParticles;
@@ -22,9 +22,10 @@ public class Boss : MonoBehaviour
         displayHealth.text = ""+health;
         if(health <= 0)
         {
+            gameObject.SetActive(false);
             AudioHelper.PlayClip2D(_bossDeathSound, 1f);
             _deathParticles = Instantiate(_deathParticles, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
 
     }

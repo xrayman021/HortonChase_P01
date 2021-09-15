@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public static int _currentHealth;
     int _treasureAmount;
     int SetHealth;
+    [SerializeField] AudioClip _playerDamageSound = null;
+    [SerializeField] ParticleSystem _playerDamageParticles;
 
     TankController _tankController;
 
@@ -36,6 +38,8 @@ public class Player : MonoBehaviour
         Debug.Log("Player's health: " + _currentHealth);
         if(_currentHealth <= 0)
         {
+            AudioHelper.PlayClip2D(_playerDamageSound, 1f);
+            _playerDamageParticles = Instantiate(_playerDamageParticles, transform.position, Quaternion.identity);
             Kill();
         }
     }
