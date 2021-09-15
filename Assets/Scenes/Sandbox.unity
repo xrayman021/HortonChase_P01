@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 3
-  _displayHealth: {fileID: 0}
+  _displayHealth: {fileID: 370778255}
 --- !u!114 &732590198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,6 +2329,7 @@ MonoBehaviour:
   shootGap: 1
   player: {fileID: 732590192}
   aimGap: 0.5
+  modeGap: 5
 --- !u!114 &1522210840
 MonoBehaviour:
   m_ObjectHideFlags: 0

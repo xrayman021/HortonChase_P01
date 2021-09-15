@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public static int health = 100;
+    public static int health = 50;
     public Text displayHealth;
 
     // Start is called before the first frame update
