@@ -38,8 +38,7 @@ public class Player : MonoBehaviour
         Debug.Log("Player's health: " + _currentHealth);
         if(_currentHealth <= 0)
         {
-            AudioHelper.PlayClip2D(_playerDamageSound, 1f);
-            _playerDamageParticles = Instantiate(_playerDamageParticles, transform.position, Quaternion.identity);
+            
             Kill();
         }
     }
@@ -47,8 +46,8 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         gameObject.SetActive(false);
-        //Play particles
-        //Play sounds
+        AudioHelper.PlayClip2D(_playerDamageSound, 1f);
+        _playerDamageParticles = Instantiate(_playerDamageParticles, transform.position, Quaternion.identity);
     }
 
     public void IncreaseTreasure(int treasureIncrease)
