@@ -1050,7 +1050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &812314400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2123,7 +2123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1510979298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2309,6 +2309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayHealth: {fileID: 458507194}
+  _bossDeathSound: {fileID: 8300000, guid: 9293ffe84dc70ec4595207245e8285b1, type: 3}
+  _deathParticles: {fileID: 0}
 --- !u!114 &1522210839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3400,7 +3402,7 @@ MonoBehaviour:
   _projectile: {fileID: 8360317887122494767, guid: a817a2e83d29be444be1b8fd935dce78, type: 3}
   _projectileSpawnLocation: {fileID: 4977396753573869192}
   _shootParticle: {fileID: 4366083404799151306, guid: 0483a294a36e431429771b8cdbeca8f0, type: 3}
-  _shootSound: {fileID: 8300000, guid: fa22482ce818ab0468f6001252604dee, type: 3}
+  _shootSound: {fileID: 8300000, guid: f79e5b5cc460c42458fa8786ba3a9a86, type: 3}
 --- !u!1001 &6044867889017850687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3623,4 +3625,4 @@ MonoBehaviour:
   _projectile: {fileID: 733396975792355040, guid: 9e9060025efc2c349856b3738008ed4f, type: 3}
   _projectileSpawnLocation: {fileID: 773184508}
   _shootParticle: {fileID: 4366083404799151306, guid: 0483a294a36e431429771b8cdbeca8f0, type: 3}
-  _shootSound: {fileID: 8300000, guid: fa22482ce818ab0468f6001252604dee, type: 3}
+  _shootSound: {fileID: 8300000, guid: f79e5b5cc460c42458fa8786ba3a9a86, type: 3}
