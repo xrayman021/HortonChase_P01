@@ -1443,7 +1443,7 @@ GameObject:
   - component: {fileID: 940142446}
   m_Layer: 0
   m_Name: ShakeManager
-  m_TagString: Untagged
+  m_TagString: ScreenShake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d995119f18ec7a14fa5382e3dd221a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camAnim: {fileID: 0}
+  camAnim: {fileID: 139571744}
 --- !u!4 &940142447
 Transform:
   m_ObjectHideFlags: 0

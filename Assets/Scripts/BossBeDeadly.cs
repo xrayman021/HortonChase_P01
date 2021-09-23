@@ -25,6 +25,7 @@ public class BossBeDeadly : MonoBehaviour
         if (Vector3.Distance(this.transform.position, thePlayer.transform.position) < damageDistance)
         {
             AudioHelper.PlayClip2D(_playerDamagedSound, 1f);
+            shake.CamShake();
             playerScript.DecreaseHealth(1);
             Destroy(this.gameObject);
         }
