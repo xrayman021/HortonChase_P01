@@ -9,11 +9,14 @@ public class BossBeDeadly : MonoBehaviour
     public int damage = 5;
     private Player playerScript;
     [SerializeField] AudioClip _playerDamagedSound = null;
+
+    private Shake shake;
     // Start is called before the first frame update
     void Start()
     {
         thePlayer = GameObject.Find("Tank");
         playerScript = thePlayer.GetComponent<Player>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     // Update is called once per frame
