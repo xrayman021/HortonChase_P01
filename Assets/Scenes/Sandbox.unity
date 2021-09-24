@@ -931,6 +931,7 @@ MonoBehaviour:
   _displayHealth: {fileID: 370778255}
   _playerDamageSound: {fileID: 8300000, guid: d2b154981161fe34eb13c37ffcb9630c, type: 3}
   _playerDamageParticles: {fileID: 4366083404799151306, guid: 0483a294a36e431429771b8cdbeca8f0, type: 3}
+  _flashImage: {fileID: 1114337330}
 --- !u!114 &732590198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1693,6 +1694,7 @@ GameObject:
   - component: {fileID: 1114337327}
   - component: {fileID: 1114337329}
   - component: {fileID: 1114337328}
+  - component: {fileID: 1114337330}
   m_Layer: 5
   m_Name: FlashImage
   m_TagString: Untagged
@@ -1757,6 +1759,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114337326}
   m_CullTransparentMesh: 1
+--- !u!114 &1114337330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114337326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43cbc59070700eb4aabdd242468bc65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164151239
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     int SetHealth;
     [SerializeField] AudioClip _playerDamageSound = null;
     [SerializeField] ParticleSystem _playerDamageParticles;
+    [SerializeField] FlashImage _flashImage;
 
     TankController _tankController;
 
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     public void DecreaseHealth(int amount)
     {
         _currentHealth -= amount;
+        _flashImage.StartFlash(.25f, .5f, Color.red);
         Debug.Log("Player's health: " + _currentHealth);
         if(_currentHealth <= 0)
         {
