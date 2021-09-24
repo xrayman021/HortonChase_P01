@@ -14,10 +14,11 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip _playerDamageSound = null;
     [SerializeField] ParticleSystem _playerDamageParticles;
     [SerializeField] FlashImage _flashImage;
+    [SerializeField] Color _flashColor;
 
     TankController _tankController;
 
-    private void Awake()
+    private void Awake() 
     {
         _tankController = GetComponent<TankController>();
     }
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
     public void DecreaseHealth(int amount)
     {
         _currentHealth -= amount;
-        _flashImage.StartFlash(.25f, .5f, Color.red);
+        _flashImage.StartFlash(.25f, .5f, _flashColor);
         Debug.Log("Player's health: " + _currentHealth);
         if(_currentHealth <= 0)
         {

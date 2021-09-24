@@ -932,6 +932,7 @@ MonoBehaviour:
   _playerDamageSound: {fileID: 8300000, guid: d2b154981161fe34eb13c37ffcb9630c, type: 3}
   _playerDamageParticles: {fileID: 4366083404799151306, guid: 0483a294a36e431429771b8cdbeca8f0, type: 3}
   _flashImage: {fileID: 1114337330}
+  _flashColor: {r: 1, g: 0.1764706, b: 0, a: 0}
 --- !u!114 &732590198
 MonoBehaviour:
   m_ObjectHideFlags: 0
