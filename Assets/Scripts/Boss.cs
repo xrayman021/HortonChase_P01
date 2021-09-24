@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Boss : MonoBehaviour
 {
     public static int health = 50;
@@ -39,6 +40,7 @@ public class Boss : MonoBehaviour
         {
             PlayerImpact(player);
             ImpactFeedback();
+            //CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
         }
     }
 
