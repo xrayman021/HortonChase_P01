@@ -9,14 +9,14 @@ public class BossBeDeadly : MonoBehaviour
     public int damage = 5;
     private Player playerScript;
     [SerializeField] AudioClip _playerDamagedSound = null;
-
-    private Shake shake;
+    public CameraShake cameraShake;
+    //private Shake shake;
     // Start is called before the first frame update
     void Start()
     {
         thePlayer = GameObject.Find("Tank");
         playerScript = thePlayer.GetComponent<Player>();
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        //shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,8 @@ public class BossBeDeadly : MonoBehaviour
         if (Vector3.Distance(this.transform.position, thePlayer.transform.position) < damageDistance)
         {
             AudioHelper.PlayClip2D(_playerDamagedSound, 1f);
-            shake.CamShake();
+            StartCoroutine(cameraShake.Shake(.15f,.4f));
+            //shake.CamShake();
             playerScript.DecreaseHealth(1);
             Destroy(this.gameObject);
         }

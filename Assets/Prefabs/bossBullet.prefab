@@ -245,3 +245,4 @@ MonoBehaviour:
   thePlayer: {fileID: 0}
   damage: 1
   _playerDamagedSound: {fileID: 8300000, guid: d2b154981161fe34eb13c37ffcb9630c, type: 3}
+  cameraShake: {fileID: 4978962018052153847, guid: b3bb44804ac98094abc30f3aa6e38fe2, type: 3}
