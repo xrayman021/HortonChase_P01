@@ -17,6 +17,7 @@ public class BeDeadly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Vector3.Distance(this.transform.position, theBoss.transform.position) < damageDistance)
         {
             Boss.health -= damage;

@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     [SerializeField] int _damageAmount = 1;
     [SerializeField] ParticleSystem _impactParticles;
     [SerializeField] AudioClip _impactSound;
+    
 
     // Start is called before the first frame update
     void Start()
