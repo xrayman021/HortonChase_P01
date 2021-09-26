@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem _playerDamageParticles;
     [SerializeField] FlashImage _flashImage;
     [SerializeField] Color _flashColor;
+    public HealthBar healthBar;
     
 
     TankController _tankController;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _currentHealth = _maxHealth;
+        healthBar.SetMaxHealth(_maxHealth);
     }
 
     public void IncreaseHealth(int amount)
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
     public void DecreaseHealth(int amount)
     {
         _currentHealth -= amount;
+        healthBar.SetHealth(_currentHealth);
         _flashImage.StartFlash(.25f, .5f, _flashColor);
         Debug.Log("Player's health: " + _currentHealth);
         if(_currentHealth <= 0)
