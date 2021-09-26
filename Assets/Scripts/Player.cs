@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem _playerDamageParticles;
     [SerializeField] FlashImage _flashImage;
     [SerializeField] Color _flashColor;
+    
 
     TankController _tankController;
 

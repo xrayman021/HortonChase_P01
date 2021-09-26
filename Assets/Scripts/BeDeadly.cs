@@ -12,6 +12,7 @@ public class BeDeadly : MonoBehaviour
     void Start()
     {
         theBoss = GameObject.Find("Boss");
+        
     }
 
     // Update is called once per frame
