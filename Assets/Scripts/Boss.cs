@@ -7,24 +7,27 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
     public static int health = 50;
+    public static int maxHealth = 50;
     public Text displayHealth;
     [SerializeField] AudioClip _bossDeathSound = null;
     [SerializeField] ParticleSystem _deathParticles;
     [SerializeField] int _damageAmount = 1;
     [SerializeField] ParticleSystem _impactParticles;
     [SerializeField] AudioClip _impactSound;
+    public HealthBar healthBar;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
         displayHealth.text = ""+health;
+        healthBar.SetHealth(health);
         if(health <= 0)
         {
             gameObject.SetActive(false);
