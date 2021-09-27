@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TankController))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] int _maxHealth = 3;
+    [SerializeField] int _maxHealth = 10;
     [SerializeField] Text _displayHealth; 
     public static int _currentHealth;
     int _treasureAmount;
@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public void IncreaseHealth(int amount)
     {
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+        _currentHealth += amount;
+        healthBar.SetHealth(_currentHealth);
         Debug.Log("Player's health: " + _currentHealth);
     }
 
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         _displayHealth.text = ""+_currentHealth;
+        
     }
 
 
