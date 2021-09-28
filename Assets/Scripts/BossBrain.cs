@@ -13,6 +13,7 @@ public class BossBrain : MonoBehaviour
     public float shootPower;
     [SerializeField] AudioClip _shootSound = null;
     [SerializeField] ParticleSystem _shootParticles;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class BossBrain : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, destination) > stopDistance && !stop)
         {
+            
             transform.LookAt(destination);
             transform.Translate(0, 0, speed * Time.deltaTime);
         }

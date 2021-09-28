@@ -17,12 +17,18 @@ public class BossMovement : MonoBehaviour
     public float aimGap = 0.5f;
     private float modeTimer = 0;
     public float modeGap = 5;
+    [SerializeField] ParticleSystem _chargeParticles;
+    //[SerializeField] AudioClip _chargeSound = null;
+    //bool isCharging = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        //isCharging = false;
         theBoss.destination = new Vector3(Random.Range(-bossRangex, bossRangex), transform.position.y, Random.Range(-bossRangez, bossRangez));
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -77,6 +83,14 @@ public class BossMovement : MonoBehaviour
 
             }
             theBoss.destination = player.transform.position;
+            _chargeParticles = Instantiate(_chargeParticles, transform.position, Quaternion.identity);
+            /*if (!isCharging)
+            {
+                AudioHelper.PlayClip2D(_chargeSound, 1f);
+                isCharging = true;
+            }*/
+
         }
     }
+    
 }
