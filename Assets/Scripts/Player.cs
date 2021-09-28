@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] FlashImage _flashImage;
     [SerializeField] Color _flashColor;
     public HealthBar healthBar;
+    [SerializeField] private Text loseText;
     
 
     TankController _tankController;
@@ -23,12 +24,14 @@ public class Player : MonoBehaviour
     private void Awake() 
     {
         _tankController = GetComponent<TankController>();
+        
     }
 
     private void Start()
     {
         _currentHealth = _maxHealth;
         healthBar.SetMaxHealth(_maxHealth);
+        loseText.enabled = false;
     }
 
     public void IncreaseHealth(int amount)
@@ -54,9 +57,10 @@ public class Player : MonoBehaviour
 
     public void Kill()
     {
-        gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         AudioHelper.PlayClip2D(_playerDamageSound, 1f);
         _playerDamageParticles = Instantiate(_playerDamageParticles, transform.position, Quaternion.identity);
+        loseText.enabled = true;
     }
 
     public void IncreaseTreasure(int treasureIncrease)

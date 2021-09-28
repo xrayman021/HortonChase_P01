@@ -15,12 +15,14 @@ public class Boss : MonoBehaviour
     [SerializeField] ParticleSystem _impactParticles;
     [SerializeField] AudioClip _impactSound;
     public HealthBar healthBar;
-    
+    [SerializeField] private Text winText;
+
 
     // Start is called before the first frame update
     void Start()
     {
         healthBar.SetMaxHealth(maxHealth);
+        winText.enabled = false;
     }
 
     // Update is called once per frame
@@ -30,9 +32,10 @@ public class Boss : MonoBehaviour
         healthBar.SetHealth(health);
         if(health <= 0)
         {
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
             AudioHelper.PlayClip2D(_bossDeathSound, 1f);
             _deathParticles = Instantiate(_deathParticles, transform.position, Quaternion.identity);
+            winText.enabled = true;
             //Destroy(this.gameObject);
         }
 
