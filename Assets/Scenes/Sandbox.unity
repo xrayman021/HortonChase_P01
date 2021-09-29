@@ -1271,6 +1271,7 @@ MonoBehaviour:
   launchpoint: {fileID: 1967068123}
   bullet: {fileID: 1751963775106216404, guid: 6a95f2de878fd0b469b716e3a0f93bcb, type: 3}
   particleSystem: {fileID: 4366083404799151308, guid: 0483a294a36e431429771b8cdbeca8f0, type: 3}
+  _shootSound: {fileID: 8300000, guid: dde3b4832a2c43749a77b971cdd6a132, type: 3}
   fireRate: 1.5
 --- !u!1 &762856941
 GameObject:

@@ -12,6 +12,8 @@ public class Shoot : MonoBehaviour
 
     public GameObject particleSystem;
 
+    [SerializeField] AudioClip _shootSound = null;
+
     public float fireRate = 0.5F;
 
     private float nextFire = 0.0F;
@@ -27,6 +29,7 @@ public class Shoot : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             GameObject currentBullet = Instantiate(bullet, launchpoint.position, launchpoint.rotation);
+            AudioHelper.PlayClip2D(_shootSound, 1f);
             currentBullet.GetComponent<Rigidbody>().AddForce(launchpoint.forward * power);
             GameObject muzzleFlash = Instantiate(particleSystem, launchpoint.position, launchpoint.rotation);
         }

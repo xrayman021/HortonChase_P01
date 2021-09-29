@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public static int health = 50;
-    public static int maxHealth = 50;
+    public static int health = 75;
+    public static int maxHealth = 75;
     public Text displayHealth;
     [SerializeField] AudioClip _bossDeathSound = null;
     [SerializeField] ParticleSystem _deathParticles;
