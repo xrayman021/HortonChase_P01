@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        _displayHealth.text = ""+_currentHealth;
+        _displayHealth.text = "Player Health: "+_currentHealth;
         
     }
 

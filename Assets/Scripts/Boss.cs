@@ -28,7 +28,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayHealth.text = ""+health;
+        displayHealth.text = "Boss Health: "+health;
         healthBar.SetHealth(health);
         if(health <= 0)
         {
