@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameInput : MonoBehaviour
 {
     [SerializeField] AudioClip _backgroundMusic;
+    private AudioSource Audio;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -26,9 +27,12 @@ public class GameInput : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        AudioHelper.PlayClip2D(_backgroundMusic, 0.5f);
+        Audio = GetComponent<AudioSource>();
+        Audio.clip = _backgroundMusic;
+        Audio.loop = true;
+        Audio.Play();
     }
 
 
